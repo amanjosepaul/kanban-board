@@ -3,6 +3,7 @@ import express from "express";
 import { connectDB } from "./config/db.js";
 import cors from "cors";
 import authRouter from "./routes/authRouters.js";
+import kanbanBoardRouter from "./routes/boardRouters.js";
 
 configDotenv();
 
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/auth", authRouter);
+app.use("/board", kanbanBoardRouter);
 
 app.listen(PORT, () => {
   connectDB();

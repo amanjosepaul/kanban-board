@@ -13,3 +13,5 @@ client/build/
 # Env
 .env
 .env.local
+
+.gitignore
